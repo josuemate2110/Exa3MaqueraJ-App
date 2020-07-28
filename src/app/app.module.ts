@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { BibliotecaComponent } from './componentes/biblioteca/biblioteca.component';
 import { ListComponent } from './componentes/libro/list/list.component';
+import { LibroService } from './services/libro.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { ListComponent } from './componentes/libro/list/list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LibroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
